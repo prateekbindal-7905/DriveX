@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DriveX - Premium Car Rental Service. Book luxury, sports, and economy cars at affordable rates.">
+    <title>DriveX | Premium Car Rental</title>
+    
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body class="index-page">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> DriveX
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="cars.html">Cars</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="cars.html" class="btn btn-primary" style="color: white;">Book Now</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container fade-in">
+            <div class="hero-content">
+                <h1>Experience the Drive of Your Life</h1>
+                <p>Premium car rentals at affordable rates. Choose from our extensive fleet of luxury, sports, and economy vehicles for your next journey.</p>
+                <div class="flex gap-md">
+                    <a href="cars.html" class="btn btn-primary">Browse Cars <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars -->
+    <section class="section" style="background: var(--color-surface);">
+        <div class="container">
+            <div class="text-center slide-up">
+                <h2 class="section-title">Featured <span class="text-primary">Fleet</span></h2>
+                <p class="section-subtitle">Explore our most popular vehicles available for immediate booking.</p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-lg" id="homeFeaturedCars">
+                <!-- Cars will be injected here by cars.js -->
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--space-xl);">
+                <a href="cars.html" class="btn btn-outline">View All Vehicles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center slide-up delay-100">
+                <h2 class="section-title">How It <span class="text-primary">Works</span></h2>
+                <p class="section-subtitle">Rent your dream car in three simple steps.</p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-lg text-center">
+                <div class="slide-up delay-200" style="padding: var(--space-lg); background: var(--color-surface); border-radius: var(--radius-lg); border: var(--glass-border);">
+                    <div style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">1. Choose a Car</h3>
+                    <p class="text-muted">Browse our wide selection of premium vehicles and find the perfect match for your needs.</p>
+                </div>
+                <div class="slide-up delay-300" style="padding: var(--space-lg); background: var(--color-surface); border-radius: var(--radius-lg); border: var(--glass-border);">
+                    <div style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">2. Book & Pay</h3>
+                    <p class="text-muted">Select your dates, confirm the booking, and securely pay the required security deposit.</p>
+                </div>
+                <div class="slide-up delay-400" style="padding: var(--space-lg); background: var(--color-surface); border-radius: var(--radius-lg); border: var(--glass-border);">
+                    <div style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">3. Drive Away</h3>
+                    <p class="text-muted">Verify your documents at pickup, get the keys, and enjoy the ultimate driving experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" style="background: var(--color-surface);">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-xl items-center">
+                <div class="slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Why Choose Us" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-subtle);">
+                </div>
+                <div class="slide-up delay-200">
+                    <h2 class="section-title">Why Choose <span class="text-primary">DriveX</span>?</h2>
+                    <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 1.125rem;">We offer more than just car rentals. We provide a seamless, premium experience tailored to your journey.</p>
+                    
+                    <ul style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-primary); font-size: 1.5rem;"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 style="font-size: 1.125rem;">Quality Assured Vehicles</h4>
+                                <p class="text-muted" style="font-size: 0.875rem;">All our cars are regularly serviced and maintained to the highest standards.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-primary); font-size: 1.5rem;"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 style="font-size: 1.125rem;">Transparent Pricing</h4>
+                                <p class="text-muted" style="font-size: 0.875rem;">No hidden fees. You see exactly what you pay for during checkout.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="color: var(--color-primary); font-size: 1.5rem;"><i class="fa-solid fa-check-circle"></i></div>
+                            <div>
+                                <h4 style="font-size: 1.125rem;">24/7 Roadside Assistance</h4>
+                                <p class="text-muted" style="font-size: 0.875rem;">Drive with peace of mind knowing we're always here to help.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center slide-up">
+                <h2 class="section-title">What Our <span class="text-primary">Clients Say</span></h2>
+                <p class="section-subtitle">Real experiences from our satisfied customers.</p>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-lg">
+                <div class="slide-up delay-100" style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); position: relative;">
+                    <i class="fa-solid fa-quote-right" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; color: var(--color-border);"></i>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="margin: 0;">Michael R.</h4>
+                            <div style="color: var(--color-accent); font-size: 0.875rem;">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted" style="font-style: italic;">"The BMW M4 I rented was in pristine condition. The booking process was incredibly smooth, and the staff at pickup were very professional."</p>
+                </div>
+                
+                <div class="slide-up delay-200" style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); position: relative;">
+                    <i class="fa-solid fa-quote-right" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; color: var(--color-border);"></i>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="margin: 0;">Sarah T.</h4>
+                            <div style="color: var(--color-accent); font-size: 0.875rem;">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted" style="font-style: italic;">"Rented an SUV for a family trip. Highly recommend DriveX. The transparent pricing with no hidden fees is exactly what I look for in a rental company."</p>
+                </div>
+
+                <div class="slide-up delay-300" style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); position: relative;">
+                    <i class="fa-solid fa-quote-right" style="position: absolute; top: 1rem; right: 1rem; font-size: 2rem; color: var(--color-border);"></i>
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="User" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                        <div>
+                            <h4 style="margin: 0;">David K.</h4>
+                            <div style="color: var(--color-accent); font-size: 0.875rem;">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-muted" style="font-style: italic;">"Great experience overall. The security deposit process was clearly explained, and I got my refund promptly after returning the Tesla Model 3."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
+        <div class="container text-center slide-up">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem; color: white;">Ready for your next adventure?</h2>
+            <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">Book your dream car today and experience the road like never before.</p>
+            <a href="cars.html" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem;">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <i class="fa-solid fa-car-side"></i> DriveX
+                    </a>
+                    <p>Providing premium and reliable car rental services across the country. Your journey, our priority.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="cars.html">Our Cars</a>
+                        <a href="about.html">About Us</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <div class="footer-links">
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Rental Agreement</a>
+                        <a href="#">Deposit Policy</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-links">
+                        <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> +1 (234) 567-890</a>
+                        <a href="mailto:support@drivex.com"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> support@drivex.com</a>
+                        <p style="margin-top: 0.5rem; display: flex; gap: 8px;"><i class="fa-solid fa-location-dot" style="margin-top: 4px; color: var(--color-primary);"></i> 123 Rental Ave, Cityville, State 12345</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 DriveX Car Rentals. All Rights Reserved. (Frontend Demo)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cars.js"></script>
+</body>
+</html>
