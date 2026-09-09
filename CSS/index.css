@@ -1,0 +1,39 @@
+/* css/index.css - Homepage Dedicated Stylesheet */
+
+/* Import Design System, Core Styles & Components */
+@import url('styles.css');
+@import url('components.css');
+@import url('animations.css');
+
+/* Index Page Specific Styles */
+.index-page .hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.index-page .featured-section {
+  background-color: var(--color-bg);
+}
+
+.index-page .why-choose-us img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+  transition: transform var(--transition-normal);
+}
+
+.index-page .why-choose-us img:hover {
+  transform: scale(1.02);
+}
+
+.index-page .testimonial-card {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: var(--transition-normal);
+}
+
+.index-page .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
