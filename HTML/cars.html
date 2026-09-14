@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our extensive fleet of premium cars available for rent at DriveX.">
+    <title>Our Cars | DriveX</title>
+    
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/cars.css">
+</head>
+<body class="cars-page">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar" style="background: var(--color-surface); border-bottom: 1px solid var(--color-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> DriveX
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="cars.html" class="active">Cars</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="cars.html" class="btn btn-primary" style="color: white;">Book Now</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 150px; padding-bottom: var(--space-xl); background: var(--color-bg);">
+        <div class="container text-center fade-in">
+            <h1 class="section-title">Our <span class="text-primary">Fleet</span></h1>
+            <p class="section-subtitle">Find the perfect vehicle for your next journey.</p>
+        </div>
+    </section>
+
+    <!-- Cars Container with Sidebar -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 250px 1fr; gap: var(--space-xl);">
+                
+                <!-- Filters Sidebar -->
+                <aside class="slide-in-right delay-100" style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: var(--glass-border); align-self: start; position: sticky; top: 100px;">
+                    <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-filter text-primary"></i> Filters
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="filterBrand">Brand</label>
+                        <select class="form-control" id="filterBrand">
+                            <option value="all">All Brands</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                            <option value="land rover">Land Rover</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="tesla">Tesla</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="filterType">Car Type</label>
+                        <select class="form-control" id="filterType">
+                            <option value="all">All Types</option>
+                            <option value="electric">Electric</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="sports">Sports</option>
+                            <option value="suv">SUV</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="filterPrice">Price (Per Day)</label>
+                        <select class="form-control" id="filterPrice">
+                            <option value="all">Default Sort</option>
+                            <option value="low">Price: Low to High</option>
+                            <option value="high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </aside>
+                
+                <!-- Cars Grid -->
+                <main>
+                    <div class="grid grid-cols-2 gap-lg" id="carsGrid">
+                        <!-- Cars injected by JS -->
+                    </div>
+                </main>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <i class="fa-solid fa-car-side"></i> DriveX
+                    </a>
+                    <p>Providing premium and reliable car rental services across the country. Your journey, our priority.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="cars.html">Our Cars</a>
+                        <a href="about.html">About Us</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <div class="footer-links">
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Rental Agreement</a>
+                        <a href="#">Deposit Policy</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-links">
+                        <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="margin-right: 8px;"></i> +1 (234) 567-890</a>
+                        <a href="mailto:support@drivex.com"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> support@drivex.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 DriveX Car Rentals. All Rights Reserved. (Frontend Demo)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cars.js"></script>
+</body>
+</html>
