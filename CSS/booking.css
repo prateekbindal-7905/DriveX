@@ -1,0 +1,51 @@
+/* css/booking.css - Booking Page Dedicated Stylesheet */
+
+/* Import Design System, Core Styles & Components */
+@import url('styles.css');
+@import url('components.css');
+@import url('animations.css');
+
+/* Booking Page Specific Styles */
+.booking-page .booking-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.booking-page .booking-card {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.booking-page .summary-card {
+  position: sticky;
+  top: 100px;
+}
+
+.booking-page .summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.booking-page .summary-row.total {
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  padding-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .booking-page .booking-grid {
+    grid-template-columns: 1fr;
+  }
+  .booking-page .summary-card {
+    position: static;
+  }
+}

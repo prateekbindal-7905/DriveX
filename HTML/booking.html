@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your rental car securely.">
+    <title>Booking | DriveX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/booking.css">
+</head>
+<body class="booking-page">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar" style="background: var(--color-surface); border-bottom: 1px solid var(--color-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> DriveX
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="cars.html">Cars</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section class="section" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <h1 class="section-title text-center slide-up">Complete Your <span class="text-primary">Booking</span></h1>
+            
+            <div class="grid grid-cols-2 gap-xl" style="margin-top: 3rem;">
+                
+                <!-- Booking Form -->
+                <div class="slide-in-right">
+                    <form id="bookingForm" style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: var(--glass-border);">
+                        <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">Booking Details</h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Pickup Location</label>
+                            <select class="form-control" required>
+                                <option value="">Select Location</option>
+                                <option value="airport">City Airport</option>
+                                <option value="downtown">Downtown Office</option>
+                                <option value="station">Central Train Station</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="form-group">
+                                <label class="form-label" for="pickupDate">Pickup Date & Time</label>
+                                <input type="datetime-local" id="pickupDate" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="returnDate">Return Date & Time</label>
+                                <input type="datetime-local" id="returnDate" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">Personal Information</h3>
+                        
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+1 (234) 567-8900" required>
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: 2rem;">
+                            <label style="display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer;">
+                                <input type="checkbox" required style="margin-top: 4px;">
+                                <span class="text-muted" style="font-size: 0.875rem;">I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and understand that I must provide a valid Driving License and Government ID at pickup.</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; padding: 1rem; font-size: 1.125rem;">Confirm Booking</button>
+                    </form>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="slide-up delay-200">
+                    <div style="background: var(--color-bg); padding: var(--space-lg); border-radius: var(--radius-lg); border: 1px solid var(--color-border); position: sticky; top: 100px;">
+                        <h3 style="margin-bottom: 1.5rem;">Order Summary</h3>
+                        
+                        <div id="carSummary" style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem; margin-bottom: 1rem;">
+                            <!-- Car info injected here -->
+                            <p class="text-muted">Please select a car.</p>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span class="text-muted">Duration</span>
+                            <span id="totalDays" style="font-weight: 600;">-</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span class="text-muted">Rental Cost</span>
+                            <span id="totalPrice" style="font-weight: 600;">-</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border);">
+                            <span class="text-muted">Security Deposit (Refundable)</span>
+                            <span id="securityDeposit" style="font-weight: 600;">$500</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 700; color: var(--color-primary);">
+                            <span>Total Due Today</span>
+                            <span id="finalTotal">-</span>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; padding: 1rem; background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--color-accent); border-radius: var(--radius-sm);">
+                            <h4 style="color: var(--color-accent); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-triangle-exclamation"></i> Important Notice</h4>
+                            <p style="font-size: 0.875rem; color: var(--color-text-muted);">The security deposit of $500 will be held on your credit card and refunded within 3-5 business days after returning the vehicle without damages.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popup for Confirmation -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2 style="margin-bottom: 1rem;">Booking Confirmed!</h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">Your reservation has been successfully placed. A confirmation email has been sent to you. Please bring your valid ID and Driving License to the pickup location.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('closeModal').click();">Return to Home</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>
