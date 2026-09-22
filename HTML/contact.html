@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact DriveX for inquiries.">
+    <title>Contact Us | DriveX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
+</head>
+<body class="contact-page">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar" style="background: var(--color-surface); border-bottom: 1px solid var(--color-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> DriveX
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="cars.html">Cars</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="cars.html" class="btn btn-primary" style="color: white;">Book Now</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 150px; padding-bottom: var(--space-xl); background: var(--color-bg);">
+        <div class="container text-center fade-in">
+            <h1 class="section-title">Get in <span class="text-primary">Touch</span></h1>
+            <p class="section-subtitle">We're here to help and answer any questions you might have.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-xl">
+                
+                <!-- Contact Info -->
+                <div class="slide-in-right delay-100">
+                    <h2 style="margin-bottom: 1.5rem;">Contact Information</h2>
+                    <p class="text-muted" style="margin-bottom: 2rem;">Fill out the form and our team will get back to you within 24 hours.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Our Location</h4>
+                                <p class="text-muted">123 Rental Ave, Cityville, State 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Phone Number</h4>
+                                <p class="text-muted">+1 (234) 567-8900</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(59, 130, 246, 0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Email Address</h4>
+                                <p class="text-muted">support@drivex.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Placeholder -->
+                    <div style="width: 100%; height: 250px; background: var(--color-surface); border-radius: var(--radius-lg); border: var(--glass-border); display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
+                        <i class="fa-solid fa-map-location-dot" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                        <span style="display: block;">Google Maps Integration Here</span>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="slide-up delay-200">
+                    <form style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-lg); border: var(--glass-border);" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <h3 style="margin-bottom: 1.5rem;">Send us a Message</h3>
+                        
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5" required style="resize: vertical;"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <i class="fa-solid fa-car-side"></i> DriveX
+                    </a>
+                    <p>Providing premium and reliable car rental services across the country. Your journey, our priority.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="cars.html">Our Cars</a>
+                        <a href="about.html">About Us</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DriveX Car Rentals. All Rights Reserved. (Frontend Demo)</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

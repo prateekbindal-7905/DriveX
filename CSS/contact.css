@@ -1,0 +1,57 @@
+/* css/contact.css - Contact Us Dedicated Stylesheet */
+
+/* Import Design System, Core Styles & Components */
+@import url('styles.css');
+@import url('components.css');
+@import url('animations.css');
+
+/* Contact Page Specific Styles */
+.contact-page .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.contact-page .info-card {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  transition: var(--transition-normal);
+}
+
+.contact-page .info-card:hover {
+  border-color: var(--color-primary);
+  transform: translateX(5px);
+}
+
+.contact-page .info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-page .contact-form-wrapper {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
