@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View car details and pricing.">
+    <title>Car Details | DriveX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/car-details.css">
+</head>
+<body class="car-details-page">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar" style="background: var(--color-surface); border-bottom: 1px solid var(--color-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> DriveX
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="cars.html" class="active">Cars</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section class="section" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container" id="carDetailsContent">
+            <!-- Dynamic Content Injected by booking.js -->
+            <div class="text-center" style="padding: 5rem 0;">
+                <h2>Loading Car Details...</h2>
+                <p class="text-muted">If you are not redirected, please select a car from the <a href="cars.html" class="text-primary">Cars Page</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <i class="fa-solid fa-car-side"></i> DriveX
+                    </a>
+                    <p>Providing premium and reliable car rental services across the country. Your journey, our priority.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="cars.html">Our Cars</a>
+                        <a href="about.html">About Us</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DriveX Car Rentals. All Rights Reserved. (Frontend Demo)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* css/car-details.css - Car Details Page Dedicated Stylesheet */
+
+/* Import Design System, Core Styles & Components */
+@import url('styles.css');
+@import url('components.css');
+@import url('animations.css');
+
+/* Car Details Page Specific Styles */
+.car-details-page .details-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.car-details-page .car-gallery {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.car-details-page .car-gallery img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.car-details-page .spec-card {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.car-details-page .spec-card i {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.car-details-page .sidebar-booking-card {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 900px) {
+  .car-details-page .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .car-details-page .sidebar-booking-card {
+    position: static;
+  }
+}
