@@ -37,7 +37,7 @@ const carsData = [
     seats: 5,
     pricePerHour: 22,
     pricePerDay: 180,
-    image: "https://images.unsplash.com/photo-1606016159991-d8205fb10c57?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80",
     features: ["All-Wheel Drive", "Panoramic Roof", "Third Row Seating", "Blind Spot Monitor", "Touchscreen Display"]
   },
   {
@@ -63,7 +63,7 @@ const carsData = [
     seats: 2,
     pricePerHour: 40,
     pricePerDay: 350,
-    image: "https://images.unsplash.com/photo-1503376712341-ea1c65b12852?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80",
     features: ["Launch Control", "Sport Chrono Package", "Bose Surround Sound", "Adaptive Suspension"]
   },
   {

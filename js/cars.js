@@ -1,7 +1,7 @@
 // js/cars.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  const carsContainer = document.getElementById('carsGrid');
+  const carsContainer = document.getElementById('carsGrid') || document.getElementById('homeFeaturedCars');
   const filterBrand = document.getElementById('filterBrand');
   const filterType = document.getElementById('filterType');
   const filterPrice = document.getElementById('filterPrice');
